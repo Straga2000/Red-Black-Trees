@@ -16,6 +16,20 @@ public:
         this->dr = NULL;
     }
 
+    node(const node *other)
+    {
+        this->info = other->info;
+        this->dr = other->dr;
+        this->st = other->st;
+    }
+
+    void operator =(const node *other)
+    {
+        this->info = other->info;
+        this->dr = other->dr;
+        this->st = other->st;
+    }
+
     void set_info(int info)
     {
         this->info = info;
@@ -77,6 +91,24 @@ public:
         this->st = NULL;
         this->dr = NULL;
         this->p = NULL;
+    }
+
+    RBNode(const RBNode* other)
+    {
+        this->color = other->color;
+        this->info  = other->info;
+        this->st = other->st;
+        this->dr = other->dr;
+        this->p = other->p;
+    }
+
+    void operator =(const RBNode* other)
+    {
+        this->color = other->color;
+        this->info  = other->info;
+        this->st = other->st;
+        this->dr = other->dr;
+        this->p = other->p;
     }
 
     void set_info(int info)
